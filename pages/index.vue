@@ -1,7 +1,7 @@
 <template>
   <main
     v-if="players.length > 0"
-    class="grid grid-cols-1 lg:grid-cols-3 gap-2 p-2 h-full"
+    class="grid grid-cols-1 lg:grid-cols-3 gap-x-2 gap-y-16 p-2 h-full"
   >
     <video-player
       v-for="player in players"
