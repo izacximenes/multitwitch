@@ -2,7 +2,7 @@
   <div>
     <div
       v-if="showModal"
-      class="animate__animated animate__fadeIn overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+      class="animate__animated animate__fadeIn animate__faster overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
       @click.self="toggleModal"
     >
       <div class="relative w-auto my-6 mx-auto max-w-3xl">
@@ -29,9 +29,9 @@
           <!--body-->
           <div class="relative px-4 py-8 flex-col w-full">
             <input
+              ref="channel"
               v-model="channel"
               type="text"
-              autofocus
               placeholder="username ou url do canal"
               class="px-3 py-3 placeholder-gray-400 text-blueGray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
               @keydown.enter="addChannel"
@@ -77,6 +77,15 @@ export default {
       showModal: 'showModalAdd',
       hasChannel: 'hasChannel',
     }),
+  },
+  watch: {
+    showModal(newVal, oldValue) {
+      if (newVal) {
+        setTimeout(() => {
+          this.$refs.channel.focus()
+        }, 100)
+      }
+    },
   },
   methods: {
     ...mapMutations('watch', ['showModalAdd', 'addPlayer']),
