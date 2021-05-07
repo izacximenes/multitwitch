@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-60 bg-green-500 relative animate__animated animate__bounceIn"
+    class="w-full bg-twitch h-60 relative animate__animated animate__bounceIn"
     @mouseleave="showCloseButton = false"
     @mouseenter="showCloseButton = true"
   >
