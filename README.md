@@ -1,4 +1,7 @@
 # multitwitch
+Quando você precisa abrir varias abas do navegador para acompanhar vários streams ao mesmo tempo na twitch, agora você pode usar esse app e vai facilitar isso, com apenas uma aba você pode acompanhar vários streams ao mesmo tempo.
+
+![alt text](welcome.jpg)
 
 ## Build Setup
 
